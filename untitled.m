@@ -11,16 +11,17 @@ end
 % sum of image difference %
 numForLoop = length(fileList)-1;
 K = zeros(270, 480, 3, 'uint8');
-
+f = zeros(270, 480, 3, 'uint8');
 for k=117:200
-    img1 = tempFrame(k).img;
-    img2 = tempFrame(k+1).img;
+    img1 = rgb2gray(tempFrame(k).img);
+    img2 = rgb2gray(tempFrame(k+1).img);
+
     K = K + imabsdiff(img1,img2);
 end
 
-% show image %
-% figure
-% imshow(K)
+% % show image %
+% % figure
+% % imshow(K)
 
 %% Detect people using HOG
 
