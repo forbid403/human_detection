@@ -7,7 +7,6 @@ function param = SetConfig()
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     startPhase = 0; 
     startAction = 1;
-    startCam = 1;
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     imgWidth = 480;
     imgHeight = 270;
@@ -95,7 +94,6 @@ function param = SetConfig()
     param.numPhase = 0;
     param.srtPhase = startPhase;
     param.srtAction = startAction;
-    param.srtCam = startCam;
     
     
 end
