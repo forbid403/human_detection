@@ -1,5 +1,5 @@
 
-function runYolo(image, param)
+function image = runYolo(image)
 
 % Download yolo network %
 if exist('yolonet.mat','file') == 0
@@ -57,14 +57,9 @@ iouThresh = 0.4;
 %the appropriate pixel value scale for yolo recorded anywhere, but convinced
 %myself through reverse engineering that [0,1] is correct.
 
-% image = single(imresize(imread('stella2.jpeg'),[448 448]))/255;
 image = single(imresize(image,[448 448]))/255;
 
-% figure(1);
-% imagesc(image);
-
-% Define 20 class labels that yolo has been trained on. Classes are in
-% alphabetical order.
+% Define class labels
 classLabels = ["person"];
 
 %run the image through the network. Replace 'gpu' with 'cpu' if you do not
@@ -159,7 +154,7 @@ image = insertShape(image, 'Rectangle', boxes(1).coords, 'LineWidth', 4);
 figure
 imshow(image);
 
-saveModifiedImages(image, param);
+% saveModifiedImages(image, param);
 
 
 
