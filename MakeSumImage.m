@@ -27,5 +27,3 @@ end
 % set action number %
 param.srtAction = f;
 
-% run Yolo %
-%     runYolo(sumOfImage, param);

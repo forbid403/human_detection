@@ -154,7 +154,5 @@ image = insertShape(image, 'Rectangle', boxes(1).coords, 'LineWidth', 4);
 figure
 imshow(image);
 
-% saveModifiedImages(image, param);
-
 
 
